@@ -31,7 +31,7 @@ class DeliveryController extends Controller
 
             ]);
     
-            $data = DeliveryInfo::create($fields);
+            DeliveryInfo::create($fields);
             
 
             return ['message' => 'successfully !'];
