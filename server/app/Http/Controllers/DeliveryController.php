@@ -31,18 +31,14 @@ class DeliveryController extends Controller
 
             ]);
     
-            // $data = DeliveryInfo::create($fields);
-            // PackageInfo::create([
-            //     'deliveryInfoId' => $data->id,
-            //     'packDescript' => $fields['packDescript'],
-            //     'length' => $fields['length'],
-            //     'height' => $fields['height'],
-            //     'width' => $fields['width']
-            // ]);
+            $data = DeliveryInfo::create($fields);
+            
 
             return ['message' => 'successfully !'];
         } catch (\Throwable $th) {
             return ['error' => $th];
         }
     }
+
+   
 }
